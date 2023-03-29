@@ -1,0 +1,122 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0; }
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%; }
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; }
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit; }
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; }
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate; }
+
+body {
+  font-family: "Lexend Deca";
+  display: grid;
+  place-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  margin: auto; }
+  body .card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    margin: 1rem;
+    max-width: 750px; }
+    body .card_container .title {
+      text-transform: uppercase;
+      font-family: "Big Shoulders Display";
+      font-weight: 700;
+      padding: 0 1.5rem;
+      font-size: 1.8rem; }
+    body .card_container .content {
+      font-size: 12px;
+      line-height: 1.2rem;
+      padding: 0 1.5rem; }
+    body .card_container .flex-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      padding: 2rem 1rem; }
+    body .card_container .sedans {
+      background-color: #e38826; }
+      body .card_container .sedans .btn-sedans {
+        color: #e38826; }
+        body .card_container .sedans .btn-sedans:hover {
+          color: #f2f2f2;
+          background-color: transparent; }
+    body .card_container .suvs {
+      background-color: #006970; }
+      body .card_container .suvs .btn-suvs {
+        color: #006970; }
+        body .card_container .suvs .btn-suvs:hover {
+          color: #f2f2f2;
+          background-color: transparent; }
+    body .card_container .luxury {
+      background-color: #004241; }
+      body .card_container .luxury .btn-luxury {
+        color: #004241; }
+        body .card_container .luxury .btn-luxury:hover {
+          color: #f2f2f2;
+          background-color: transparent; }
+  body .btn {
+    background-color: #f2f2f2;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    font-weight: 100;
+    margin-top: 2rem;
+    width: 65%;
+    cursor: pointer; }
+
+@media screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    margin: 5rem 0; }
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin: 2rem 0; } }
